@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing page do estúdio Freya Art Piercing - Qualidade, segurança e estilo.">
+    <title>Freya Art Piercing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Freya Art Piercing</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="btn-nav">Sobre Nós</a></li>
+                    <li><a href="#services" class="btn-nav">Serviços</a></li>
+                    <li><a href="#contact" class="btn-nav">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo da página -->
+    <div class="container">
+        <section id="about" class="section">
+            <h2>Sobre Nós</h2>
+            <p>A Freya Art Piercing é um convite à autoexpressão, onde a arte corporal se funde com a beleza única de cada indivíduo. Com uma vasta gama de opções de piercings, a Freya oferece muito mais do que simples furos: é uma experiência completa de personalização e empoderamento.</p>
+        </section>
+
+        <section id="services" class="section">
+            <h2>Serviços</h2>
+            <ul>
+                <li>
+                    <h3>Perfurações corporais</h3>
+                    <div class="gallery">
+                        <img src="./img/image1.jpg" alt="Perfuração 1">
+                        <img src="./img/image2.jpg" alt="Perfuração 2">
+                        <img src="./img/image3.jpg" alt="Perfuração 3">
+                        <img src="./img/image4.jpg" alt="Perfuração 4">
+                    </div>
+                </li>
+                <li>
+                    <h3>Manutenção e trocas de piercing</h3>
+                    <p>A manutenção adequada do seu piercing é fundamental para garantir uma cicatrização saudável e prevenir infecções. Além disso, a troca periódica das joias pode renovar o visual e manter seu piercing sempre impecável.</p>
+                </li>
+                <li>
+                    <h3>Consultoria sobre cuidados pós-procedimento</h3>
+                    <p>Oferecemos um serviço completo de consultoria para garantir a cicatrização saudável e segura do seu piercing. Nossa equipe de profissionais experientes está pronta para te auxiliar em todas as etapas do processo, desde a escolha do piercing ideal até os cuidados pós-procedimento.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contato</h2>
+            <p>Entre em contato para agendar um horário ou tirar dúvidas.</p>
+            <a href="https://wa.me/+5521988919566" class="btn">Fale Conosco</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Freya Art Piercing. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetSection.offsetTop - 20,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
